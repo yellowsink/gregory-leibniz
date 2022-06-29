@@ -3,3 +3,4 @@ obj
 zig-cache
 zig-out
 node_modules
+src/nim/main
