@@ -1,0 +1,42 @@
+λ ./mark.sh
+Benchmark 1: cs/bin/Release/net6.0/cs
+  Time (mean ± σ):     330.0 ms ±  21.1 ms    [User: 308.6 ms, System: 9.4 ms]
+  Range (min … max):   302.6 ms … 377.3 ms    10 runs
+
+Benchmark 2: fs/bin/Release/net6.0/fs
+  Time (mean ± σ):      6.739 s ±  0.282 s    [User: 6.417 s, System: 0.279 s]
+  Range (min … max):    6.267 s …  6.992 s    10 runs
+
+Benchmark 3: zig/zig-out/bin/zig
+  Time (mean ± σ):     356.9 ms ±  17.1 ms    [User: 355.0 ms, System: 0.9 ms]
+  Range (min … max):   329.2 ms … 381.9 ms    10 runs
+
+Benchmark 4: python python.py
+  Time (mean ± σ):     64.570 s ±  3.794 s    [User: 64.400 s, System: 0.017 s]
+  Range (min … max):   60.010 s … 73.763 s    10 runs
+
+Benchmark 5: ruby ruby.rb
+  Time (mean ± σ):     31.054 s ±  1.241 s    [User: 30.946 s, System: 0.018 s]
+  Range (min … max):   29.850 s … 34.043 s    10 runs
+
+Benchmark 6: node js.js
+  Time (mean ± σ):     374.0 ms ±  17.6 ms    [User: 347.2 ms, System: 14.0 ms]
+  Range (min … max):   341.6 ms … 403.1 ms    10 runs
+
+Benchmark 7: deno run js.js
+  Time (mean ± σ):     347.9 ms ±  41.4 ms    [User: 325.3 ms, System: 13.1 ms]
+  Range (min … max):   294.0 ms … 435.7 ms    10 runs
+
+Benchmark 8: deno run gpujs/gpu.mjs
+  Time (mean ± σ):     198.1 ms ±  14.2 ms    [User: 177.0 ms, System: 21.9 ms]
+  Range (min … max):   161.6 ms … 215.3 ms    14 runs
+
+Summary
+  'deno run gpujs/gpu.mjs' ran
+    1.67 ± 0.16 times faster than 'cs/bin/Release/net6.0/cs'
+    1.76 ± 0.24 times faster than 'deno run js.js'
+    1.80 ± 0.15 times faster than 'zig/zig-out/bin/zig'
+    1.89 ± 0.16 times faster than 'node js.js'
+   34.02 ± 2.82 times faster than 'fs/bin/Release/net6.0/fs'
+  156.77 ± 12.85 times faster than 'ruby ruby.rb'
+  325.97 ± 30.17 times faster than 'python python.py'
